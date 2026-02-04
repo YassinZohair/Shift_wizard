@@ -1,0 +1,642 @@
+"id","user_id","created","updated","place_id","status","type"
+60594,423,1612819150,1659482246,59897,Inactive,Discount on specific menu items
+60609,423,1612819657,1659482250,59897,Inactive,Discount on specific menu items
+60610,423,1612820393,1659482250,59821,Inactive,"2 for 1 on specific menu items"
+60611,423,1612820493,1659482250,59821,Inactive,Discount on specific menu items
+61343,423,1614261570,1659482279,59821,Inactive,Discount on total bill
+61353,423,1614298185,1659482279,59897,Inactive,Discount on total bill
+62087,423,1615906603,1659482368,59821,Inactive,Discount on total bill
+62595,423,1616423340,1659482417,59821,Inactive,Discount on total bill
+62667,423,1616440487,1659482417,59821,Inactive,Discount on total bill
+62676,423,1616457337,1659482421,59897,Inactive,Discount on specific menu items
+62714,423,1616525015,1659482421,59821,Inactive,Discount on total bill
+63899,423,1618146948,1659482473,59897,Inactive,Discount on total bill
+67973,417,1623920385,1659482684,59813,Inactive,Discount on specific menu items
+68737,424,1625271185,1659482688,61698,Inactive,Freebie
+68738,424,1625272881,1659482688,61698,Inactive,Freebie
+69639,1201,1627301603,1659482700,67521,Inactive,Discount on total bill
+70889,417,1629731218,1659482709,59897,Inactive,Freebie
+71565,424,1630910017,1659482712,59897,Inactive,Discount on total bill
+71566,424,1630912356,1659482712,59813,Inactive,Discount on total bill
+71567,424,1630912410,1659482712,64276,Inactive,Discount on total bill
+71568,424,1630912465,1664539201,67521,Inactive,Discount on total bill
+71569,424,1630912702,1659482712,64643,Inactive,Discount on total bill
+72092,417,1633132249,1659482712,59897,Inactive,"2 for 1 on specific menu items"
+72306,417,1633455720,1659482712,59897,Inactive,"2 for 1 on specific menu items"
+72372,1372,1633527787,1659482722,59897,Inactive,Freebie
+72512,417,1633691700,1659482729,59897,Inactive,"2 for 1 on specific menu items"
+72526,417,1633707601,1659482729,59897,Inactive,"2 for 1 on specific menu items"
+72628,417,1633722781,1659482729,59897,Inactive,"2 for 1 on specific menu items"
+72654,417,1633723200,1659482729,59897,Inactive,"2 for 1 on specific menu items"
+72655,417,1633723200,1659482729,59897,Inactive,"2 for 1 on specific menu items"
+72892,417,1633809241,1659482729,59897,Inactive,"2 for 1 on specific menu items"
+72894,417,1633809601,1659482729,59897,Inactive,"2 for 1 on specific menu items"
+72895,417,1633809601,1659482729,59897,Inactive,"2 for 1 on specific menu items"
+72896,417,1633809601,1659482729,59897,Inactive,"2 for 1 on specific menu items"
+72897,417,1633809601,1659482729,59897,Inactive,"2 for 1 on specific menu items"
+72898,417,1633809601,1659482758,59897,Inactive,"2 for 1 on specific menu items"
+72899,417,1633809601,1659482758,59897,Inactive,"2 for 1 on specific menu items"
+72926,417,1633869301,1659482758,59897,Inactive,"2 for 1 on specific menu items"
+72928,417,1633871100,1659482758,59897,Inactive,"2 for 1 on specific menu items"
+72930,417,1633871641,1659482758,59897,Inactive,"2 for 1 on specific menu items"
+72932,417,1633880220,1659482758,59897,Inactive,"2 for 1 on specific menu items"
+72934,417,1633880280,1659482758,59897,Inactive,"2 for 1 on specific menu items"
+72936,417,1633884061,1659482758,59897,Inactive,"2 for 1 on specific menu items"
+72938,417,1633884120,1659482758,59897,Inactive,"2 for 1 on specific menu items"
+72939,417,1633884120,1659482758,59897,Inactive,"2 for 1 on specific menu items"
+72965,417,1633887060,1659482790,59897,Inactive,"2 for 1 on specific menu items"
+72972,417,1633952506,1659482790,64276,Inactive,Discount on specific menu items
+73010,417,1633972021,1659482790,59897,Inactive,"2 for 1 on specific menu items"
+73048,417,1634055721,1659482790,59897,Inactive,"2 for 1 on specific menu items"
+73179,417,1634155201,1659482790,59897,Inactive,"2 for 1 on specific menu items"
+73180,417,1634155201,1659482790,59897,Inactive,"2 for 1 on specific menu items"
+73199,417,1634224080,1659482790,64276,Inactive,Discount on specific menu items
+73201,417,1634238060,1659482790,64276,Inactive,Discount on specific menu items
+73343,417,1634404440,1659482790,59897,Inactive,"2 for 1 on specific menu items"
+73408,417,1634485440,1659482790,59897,Inactive,"2 for 1 on specific menu items"
+73409,417,1634485440,1659482819,59897,Inactive,"2 for 1 on specific menu items"
+73460,417,1634499300,1659482819,59897,Inactive,"2 for 1 on specific menu items"
+73493,417,1634570640,1659482819,59897,Inactive,"2 for 1 on specific menu items"
+73495,417,1634570700,1659482819,59897,Inactive,"2 for 1 on specific menu items"
+73506,417,1634582940,1659482819,59897,Inactive,"2 for 1 on specific menu items"
+73507,417,1634582940,1659482819,59897,Inactive,"2 for 1 on specific menu items"
+73510,417,1634583000,1659482819,59897,Inactive,"2 for 1 on specific menu items"
+73514,417,1634651760,1659482819,59897,Inactive,"2 for 1 on specific menu items"
+73573,417,1634747400,1659482819,59897,Inactive,"2 for 1 on specific menu items"
+73695,417,1635172680,1659482849,59897,Inactive,"2 for 1 on specific menu items"
+73697,417,1635172740,1659482849,59897,Inactive,"2 for 1 on specific menu items"
+73825,417,1635419581,1659482849,59897,Inactive,"2 for 1 on specific menu items"
+73858,417,1635508561,1659482849,64276,Inactive,Discount on specific menu items
+73860,417,1635508620,1659482849,64276,Inactive,Discount on specific menu items
+73994,417,1635603480,1659482849,64276,Inactive,Discount on specific menu items
+73996,417,1635604141,1659482849,59897,Inactive,"2 for 1 on specific menu items"
+74029,417,1635623700,1659482869,59897,Inactive,"2 for 1 on specific menu items"
+74031,417,1635623761,1659482869,59897,Inactive,"2 for 1 on specific menu items"
+74055,417,1635690960,1659482869,59897,Inactive,"2 for 1 on specific menu items"
+74056,417,1635690960,1659482869,59897,Inactive,"2 for 1 on specific menu items"
+74059,417,1635691020,1659482869,59897,Inactive,"2 for 1 on specific menu items"
+74124,417,1635973200,1659482869,59897,Inactive,"2 for 1 on specific menu items"
+74274,417,1636123080,1659482869,59897,Inactive,"2 for 1 on specific menu items"
+74310,417,1636145460,1659482869,59897,Inactive,"2 for 1 on specific menu items"
+74312,417,1636145521,1659482869,59897,Inactive,"2 for 1 on specific menu items"
+75910,417,1636367549,1659482899,59897,Inactive,"2 for 1 on specific menu items"
+75926,417,1636368401,1659482899,59897,Inactive,"2 for 1 on specific menu items"
+75927,417,1636368401,1659482899,59897,Inactive,"2 for 1 on specific menu items"
+75930,417,1636368402,1659482899,59897,Inactive,"2 for 1 on specific menu items"
+75932,417,1636368402,1659482899,59897,Inactive,"2 for 1 on specific menu items"
+75941,417,1636368402,1659482899,59897,Inactive,"2 for 1 on specific menu items"
+75944,417,1636368403,1659482899,59897,Inactive,"2 for 1 on specific menu items"
+75951,417,1636368403,1659482899,59897,Inactive,"2 for 1 on specific menu items"
+75955,417,1636368403,1659482899,59897,Inactive,"2 for 1 on specific menu items"
+75961,417,1636368404,1659482899,59897,Inactive,"2 for 1 on specific menu items"
+75964,417,1636368404,1659482932,59897,Inactive,"2 for 1 on specific menu items"
+75971,417,1636368405,1659482932,59897,Inactive,"2 for 1 on specific menu items"
+75974,417,1636368405,1659482932,59897,Inactive,"2 for 1 on specific menu items"
+75980,417,1636368405,1659482932,59897,Inactive,"2 for 1 on specific menu items"
+75984,417,1636368406,1659482932,59897,Inactive,"2 for 1 on specific menu items"
+75991,417,1636368406,1659482932,59897,Inactive,"2 for 1 on specific menu items"
+75994,417,1636368407,1659482932,59897,Inactive,"2 for 1 on specific menu items"
+76002,417,1636368407,1659482932,59897,Inactive,"2 for 1 on specific menu items"
+76004,417,1636368407,1659482932,59897,Inactive,"2 for 1 on specific menu items"
+76011,417,1636368408,1659482932,59897,Inactive,"2 for 1 on specific menu items"
+76014,417,1636368408,1659482966,59897,Inactive,"2 for 1 on specific menu items"
+76021,417,1636368409,1659482966,59897,Inactive,"2 for 1 on specific menu items"
+76025,417,1636368409,1659482966,59897,Inactive,"2 for 1 on specific menu items"
+76031,417,1636368409,1659482966,59897,Inactive,"2 for 1 on specific menu items"
+76034,417,1636368410,1659482966,59897,Inactive,"2 for 1 on specific menu items"
+76042,417,1636368410,1659482966,59897,Inactive,"2 for 1 on specific menu items"
+76045,417,1636368411,1659482966,59897,Inactive,"2 for 1 on specific menu items"
+76050,417,1636368411,1659482966,59897,Inactive,"2 for 1 on specific menu items"
+76054,417,1636368411,1659482966,59897,Inactive,"2 for 1 on specific menu items"
+76060,417,1636368412,1659482966,59897,Inactive,"2 for 1 on specific menu items"
+76064,417,1636368412,1659483000,59897,Inactive,"2 for 1 on specific menu items"
+76071,417,1636368412,1659483000,59897,Inactive,"2 for 1 on specific menu items"
+76075,417,1636368413,1659483000,59897,Inactive,"2 for 1 on specific menu items"
+76081,417,1636368413,1659483000,59897,Inactive,"2 for 1 on specific menu items"
+76085,417,1636368413,1659483000,59897,Inactive,"2 for 1 on specific menu items"
+76091,417,1636368414,1659483000,59897,Inactive,"2 for 1 on specific menu items"
+76094,417,1636368414,1659483000,59897,Inactive,"2 for 1 on specific menu items"
+76101,417,1636368415,1659483000,59897,Inactive,"2 for 1 on specific menu items"
+76104,417,1636368415,1659483000,59897,Inactive,"2 for 1 on specific menu items"
+76111,417,1636368416,1659483000,59897,Inactive,"2 for 1 on specific menu items"
+76114,417,1636368416,1659483037,59897,Inactive,"2 for 1 on specific menu items"
+76119,417,1636368416,1659483037,59897,Inactive,"2 for 1 on specific menu items"
+76126,417,1636368417,1659483037,59897,Inactive,"2 for 1 on specific menu items"
+76129,417,1636368417,1659483037,59897,Inactive,"2 for 1 on specific menu items"
+76135,417,1636368417,1659483037,59897,Inactive,"2 for 1 on specific menu items"
+76140,417,1636368418,1659483037,59897,Inactive,"2 for 1 on specific menu items"
+76148,417,1636368418,1659483037,59897,Inactive,"2 for 1 on specific menu items"
+76150,417,1636368418,1659483037,59897,Inactive,"2 for 1 on specific menu items"
+76157,417,1636368419,1659483037,59897,Inactive,"2 for 1 on specific menu items"
+76159,417,1636368419,1659483037,59897,Inactive,"2 for 1 on specific menu items"
+76166,417,1636368420,1659483072,59897,Inactive,"2 for 1 on specific menu items"
+76170,417,1636368420,1659483072,59897,Inactive,"2 for 1 on specific menu items"
+76198,417,1636368428,1659483072,59897,Inactive,"2 for 1 on specific menu items"
+76200,417,1636368429,1659483072,59897,Inactive,"2 for 1 on specific menu items"
+76201,417,1636368429,1659483072,59897,Inactive,"2 for 1 on specific menu items"
+76203,417,1636368429,1659483072,59897,Inactive,"2 for 1 on specific menu items"
+76204,417,1636368429,1659483072,59897,Inactive,"2 for 1 on specific menu items"
+76209,417,1636368430,1659483072,59897,Inactive,"2 for 1 on specific menu items"
+76210,417,1636368430,1659483072,59897,Inactive,"2 for 1 on specific menu items"
+76211,417,1636368430,1659483072,59897,Inactive,"2 for 1 on specific menu items"
+76212,417,1636368430,1659483107,59897,Inactive,"2 for 1 on specific menu items"
+76213,417,1636368430,1659483107,59897,Inactive,"2 for 1 on specific menu items"
+76228,417,1636368431,1659483107,59897,Inactive,"2 for 1 on specific menu items"
+76232,417,1636368432,1659483107,59897,Inactive,"2 for 1 on specific menu items"
+76239,417,1636368432,1659483107,59897,Inactive,"2 for 1 on specific menu items"
+76242,417,1636368432,1659483107,59897,Inactive,"2 for 1 on specific menu items"
+76249,417,1636368433,1659483107,59897,Inactive,"2 for 1 on specific menu items"
+76252,417,1636368433,1659483107,59897,Inactive,"2 for 1 on specific menu items"
+76259,417,1636368434,1659483107,59897,Inactive,"2 for 1 on specific menu items"
+76263,417,1636368434,1659483107,59897,Inactive,"2 for 1 on specific menu items"
+76268,417,1636368435,1659483143,59897,Inactive,"2 for 1 on specific menu items"
+76273,417,1636368435,1659483143,59897,Inactive,"2 for 1 on specific menu items"
+76277,417,1636368435,1659483143,59897,Inactive,"2 for 1 on specific menu items"
+76282,417,1636368436,1659483143,59897,Inactive,"2 for 1 on specific menu items"
+76289,417,1636368436,1659483143,59897,Inactive,"2 for 1 on specific menu items"
+76292,417,1636368437,1659483143,59897,Inactive,"2 for 1 on specific menu items"
+76295,417,1636368437,1659483143,59897,Inactive,"2 for 1 on specific menu items"
+76303,417,1636368437,1659483143,59897,Inactive,"2 for 1 on specific menu items"
+76309,417,1636368438,1659483143,59897,Inactive,"2 for 1 on specific menu items"
+76313,417,1636368438,1659483143,59897,Inactive,"2 for 1 on specific menu items"
+76319,417,1636368439,1659483179,59897,Inactive,"2 for 1 on specific menu items"
+76324,417,1636368439,1659483179,59897,Inactive,"2 for 1 on specific menu items"
+76328,417,1636368440,1659483179,59897,Inactive,"2 for 1 on specific menu items"
+76333,417,1636368440,1659483179,59897,Inactive,"2 for 1 on specific menu items"
+76337,417,1636368440,1659483179,59897,Inactive,"2 for 1 on specific menu items"
+76343,417,1636368441,1659483179,59897,Inactive,"2 for 1 on specific menu items"
+76349,417,1636368441,1659483179,59897,Inactive,"2 for 1 on specific menu items"
+76369,417,1636368443,1659483179,59897,Inactive,"2 for 1 on specific menu items"
+76427,417,1636368448,1659483179,59897,Inactive,"2 for 1 on specific menu items"
+76443,417,1636368449,1659483179,59897,Inactive,"2 for 1 on specific menu items"
+76454,417,1636368450,1659483217,59897,Inactive,"2 for 1 on specific menu items"
+76464,417,1636368451,1659483217,59897,Inactive,"2 for 1 on specific menu items"
+76506,417,1636368454,1659483217,59897,Inactive,"2 for 1 on specific menu items"
+76540,417,1636368457,1659483217,59897,Inactive,"2 for 1 on specific menu items"
+76565,417,1636368459,1659483217,59897,Inactive,"2 for 1 on specific menu items"
+76580,417,1636368460,1659483217,59897,Inactive,"2 for 1 on specific menu items"
+76594,417,1636368461,1659483217,59897,Inactive,"2 for 1 on specific menu items"
+76603,417,1636368462,1659483217,59897,Inactive,"2 for 1 on specific menu items"
+76614,417,1636368463,1659483217,59897,Inactive,"2 for 1 on specific menu items"
+76631,417,1636368464,1659483217,59897,Inactive,"2 for 1 on specific menu items"
+76640,417,1636368465,1659483254,59897,Inactive,"2 for 1 on specific menu items"
+76653,417,1636368466,1659483254,59897,Inactive,"2 for 1 on specific menu items"
+76664,417,1636368467,1659483254,59897,Inactive,"2 for 1 on specific menu items"
+76690,417,1636368469,1659483254,59897,Inactive,"2 for 1 on specific menu items"
+76703,417,1636368470,1659483254,59897,Inactive,"2 for 1 on specific menu items"
+76728,417,1636368472,1659483254,59897,Inactive,"2 for 1 on specific menu items"
+76754,417,1636368474,1659483254,59897,Inactive,"2 for 1 on specific menu items"
+76768,417,1636368475,1659483254,59897,Inactive,"2 for 1 on specific menu items"
+76780,417,1636368476,1659483254,59897,Inactive,"2 for 1 on specific menu items"
+76798,417,1636368478,1659483254,59897,Inactive,"2 for 1 on specific menu items"
+76819,417,1636368479,1659483291,59897,Inactive,"2 for 1 on specific menu items"
+76821,417,1636368480,1659483291,59897,Inactive,"2 for 1 on specific menu items"
+76872,417,1636368491,1659483291,59897,Inactive,"2 for 1 on specific menu items"
+76874,417,1636368491,1659483291,59897,Inactive,"2 for 1 on specific menu items"
+76875,417,1636368491,1659483291,59897,Inactive,"2 for 1 on specific menu items"
+76877,417,1636368491,1659483291,59897,Inactive,"2 for 1 on specific menu items"
+76880,417,1636368492,1659483291,59897,Inactive,"2 for 1 on specific menu items"
+76887,417,1636368493,1659483291,59897,Inactive,"2 for 1 on specific menu items"
+76889,417,1636368494,1659483291,59897,Inactive,"2 for 1 on specific menu items"
+76893,417,1636368495,1659483291,59897,Inactive,"2 for 1 on specific menu items"
+76896,417,1636368496,1659483330,59897,Inactive,"2 for 1 on specific menu items"
+76898,417,1636368497,1659483330,59897,Inactive,"2 for 1 on specific menu items"
+76912,417,1636368499,1659483330,59897,Inactive,"2 for 1 on specific menu items"
+76928,417,1636368501,1659483330,59897,Inactive,"2 for 1 on specific menu items"
+76931,417,1636368501,1659483330,59897,Inactive,"2 for 1 on specific menu items"
+76936,417,1636368502,1659483330,59897,Inactive,"2 for 1 on specific menu items"
+76951,417,1636368505,1659483330,59897,Inactive,"2 for 1 on specific menu items"
+76952,417,1636368504,1659483330,59897,Inactive,"2 for 1 on specific menu items"
+76953,417,1636368505,1659483330,59897,Inactive,"2 for 1 on specific menu items"
+76962,417,1636368507,1659483330,59897,Inactive,"2 for 1 on specific menu items"
+76966,417,1636368507,1659483370,59897,Inactive,"2 for 1 on specific menu items"
+76997,417,1636368509,1659483370,59897,Inactive,"2 for 1 on specific menu items"
+77000,417,1636368510,1659483370,59897,Inactive,"2 for 1 on specific menu items"
+77013,417,1636368511,1659483370,59897,Inactive,"2 for 1 on specific menu items"
+77023,417,1636368512,1659483370,59897,Inactive,"2 for 1 on specific menu items"
+77043,417,1636368514,1659483370,59897,Inactive,"2 for 1 on specific menu items"
+77052,417,1636368515,1659483370,59897,Inactive,"2 for 1 on specific menu items"
+77054,417,1636368547,1659483370,59897,Inactive,"2 for 1 on specific menu items"
+77055,417,1636368547,1659483370,59897,Inactive,"2 for 1 on specific menu items"
+77057,417,1636368548,1659483370,59897,Inactive,"2 for 1 on specific menu items"
+77058,417,1636368548,1659483409,59897,Inactive,"2 for 1 on specific menu items"
+77062,417,1636368549,1659483409,59897,Inactive,"2 for 1 on specific menu items"
+77063,417,1636368549,1659483409,59897,Inactive,"2 for 1 on specific menu items"
+77064,417,1636368549,1659483409,59897,Inactive,"2 for 1 on specific menu items"
+77065,417,1636368549,1659483409,59897,Inactive,"2 for 1 on specific menu items"
+77069,417,1636368549,1659483409,59897,Inactive,"2 for 1 on specific menu items"
+77072,417,1636368552,1659483409,59897,Inactive,"2 for 1 on specific menu items"
+77074,417,1636368554,1659483409,59897,Inactive,"2 for 1 on specific menu items"
+77076,417,1636368556,1659483409,59897,Inactive,"2 for 1 on specific menu items"
+77078,417,1636368558,1659483409,59897,Inactive,"2 for 1 on specific menu items"
+77080,417,1636368561,1659483447,59897,Inactive,"2 for 1 on specific menu items"
+77132,417,1636502406,1659483447,59897,Inactive,"2 for 1 on specific menu items"
+77133,417,1636502406,1659483447,59897,Inactive,"2 for 1 on specific menu items"
+77139,417,1636502407,1659483447,59897,Inactive,"2 for 1 on specific menu items"
+77143,417,1636502407,1659483447,59897,Inactive,"2 for 1 on specific menu items"
+77148,417,1636502408,1659483447,59897,Inactive,"2 for 1 on specific menu items"
+77150,417,1636502408,1659483447,59897,Inactive,"2 for 1 on specific menu items"
+77153,417,1636502409,1659483447,59897,Inactive,"2 for 1 on specific menu items"
+77158,417,1636502410,1659483447,59897,Inactive,"2 for 1 on specific menu items"
+77197,417,1636653061,1659483447,64276,Inactive,Discount on specific menu items
+77247,417,1636714532,1659483486,59813,Inactive,"2 for 1 on specific menu items"
+77252,417,1636718401,1659483486,59897,Inactive,"2 for 1 on specific menu items"
+77253,417,1636718401,1659483486,59897,Inactive,"2 for 1 on specific menu items"
+77254,417,1636718401,1659483495,59897,Inactive,"2 for 1 on specific menu items"
+77255,417,1636718401,1659483495,59897,Inactive,"2 for 1 on specific menu items"
+77256,417,1636718402,1659483495,59897,Inactive,"2 for 1 on specific menu items"
+77257,417,1636718402,1659483495,59897,Inactive,"2 for 1 on specific menu items"
+77264,417,1636718403,1659483495,59897,Inactive,"2 for 1 on specific menu items"
+77453,417,1636891201,1659483495,59897,Inactive,"2 for 1 on specific menu items"
+77454,417,1636891201,1659483495,59897,Inactive,"2 for 1 on specific menu items"
+77455,417,1636891201,1659483495,59897,Inactive,"2 for 1 on specific menu items"
+77456,417,1636891201,1659483495,59897,Inactive,"2 for 1 on specific menu items"
+77457,417,1636891201,1659483531,59897,Inactive,"2 for 1 on specific menu items"
+77458,417,1636891201,1659483531,59897,Inactive,"2 for 1 on specific menu items"
+77467,417,1636960920,1659483531,59897,Inactive,"2 for 1 on specific menu items"
+77468,417,1636960921,1659483531,59897,Inactive,"2 for 1 on specific menu items"
+77471,417,1636960980,1659483531,59897,Inactive,"2 for 1 on specific menu items"
+77472,417,1636960981,1659483531,59897,Inactive,"2 for 1 on specific menu items"
+77477,1372,1636972457,1659483531,59813,Inactive,"2 for 1 on specific menu items"
+77484,1372,1636983253,1659483531,64276,Inactive,Discount on total bill
+77531,417,1637064000,1659483531,59897,Inactive,"2 for 1 on specific menu items"
+77532,1372,1637064000,1659483531,64276,Inactive,Discount on total bill
+77533,1372,1637064000,1659483561,64276,Inactive,Discount on total bill
+77534,1372,1637064000,1659483561,64276,Inactive,Discount on total bill
+77535,417,1637064000,1659483561,59897,Inactive,"2 for 1 on specific menu items"
+77536,417,1637064000,1659483561,59897,Inactive,"2 for 1 on specific menu items"
+77537,1372,1637064001,1659483561,64276,Inactive,Discount on total bill
+77540,417,1637064001,1659483561,59897,Inactive,"2 for 1 on specific menu items"
+77547,417,1637064002,1659483561,59897,Inactive,"2 for 1 on specific menu items"
+77550,417,1637088481,1659483561,59897,Inactive,"2 for 1 on specific menu items"
+77603,1372,1637236801,1659483561,64276,Inactive,Discount on total bill
+77604,1372,1637236801,1659483561,64276,Inactive,Discount on total bill
+77605,1372,1637236801,1659483584,64276,Inactive,Discount on total bill
+77606,417,1637236801,1659483584,59897,Inactive,"2 for 1 on specific menu items"
+77607,417,1637236801,1659483584,59897,Inactive,"2 for 1 on specific menu items"
+77608,417,1637236801,1659483584,59897,Inactive,"2 for 1 on specific menu items"
+77609,417,1637236802,1659483584,59897,Inactive,"2 for 1 on specific menu items"
+77610,1372,1637236802,1659483584,64276,Inactive,Discount on total bill
+77619,417,1637236807,1659483584,59897,Inactive,"2 for 1 on specific menu items"
+77735,417,1637339580,1659483584,59897,Inactive,"2 for 1 on specific menu items"
+77764,417,1637355601,1659483610,64276,Inactive,Discount on specific menu items
+77800,1372,1637409600,1659483610,64276,Inactive,Discount on total bill
+77801,417,1637409600,1659483610,59897,Inactive,"2 for 1 on specific menu items"
+77802,1372,1637409600,1659483610,64276,Inactive,Discount on total bill
+77803,1372,1637409600,1659483610,64276,Inactive,Discount on total bill
+77804,1372,1637409600,1659483610,64276,Inactive,Discount on total bill
+77805,417,1637409601,1659483610,59897,Inactive,"2 for 1 on specific menu items"
+77812,417,1637409602,1659483610,59897,Inactive,"2 for 1 on specific menu items"
+77813,417,1637409602,1659483610,59897,Inactive,"2 for 1 on specific menu items"
+77816,417,1637413440,1659483610,59897,Inactive,"2 for 1 on specific menu items"
+77862,1372,1637582400,1659483636,64276,Inactive,Discount on total bill
+77863,1372,1637582400,1659483636,64276,Inactive,Discount on total bill
+77864,417,1637582400,1659483636,59897,Inactive,"2 for 1 on specific menu items"
+77865,417,1637582400,1659483636,59897,Inactive,"2 for 1 on specific menu items"
+77866,1372,1637582400,1659483636,64276,Inactive,Discount on total bill
+77867,417,1637582400,1659483636,59897,Inactive,"2 for 1 on specific menu items"
+77868,417,1637582401,1659483636,59897,Inactive,"2 for 1 on specific menu items"
+77876,1372,1637582401,1659483636,64276,Inactive,Discount on total bill
+77911,417,1637691061,1659483636,59897,Inactive,"2 for 1 on specific menu items"
+77935,417,1637755201,1659483636,59897,Inactive,"2 for 1 on specific menu items"
+77936,1372,1637755201,1659483662,64276,Inactive,Discount on total bill
+77937,1372,1637755201,1659483662,64276,Inactive,Discount on total bill
+77938,1372,1637755201,1659483662,64276,Inactive,Discount on total bill
+77939,1372,1637755201,1659483662,64276,Inactive,Discount on total bill
+77945,417,1637755202,1659483662,59897,Inactive,"2 for 1 on specific menu items"
+77993,417,1637846461,1659483662,59897,Inactive,"2 for 1 on specific menu items"
+77995,417,1637869621,1659483662,64276,Inactive,Discount on specific menu items
+78014,1372,1637928000,1659483662,64276,Inactive,Discount on total bill
+78015,1372,1637928000,1659483662,64276,Inactive,Discount on total bill
+78016,417,1637928000,1659483662,59897,Inactive,"2 for 1 on specific menu items"
+78017,1372,1637928000,1659483680,64276,Inactive,Discount on total bill
+78018,1372,1637928000,1659483680,64276,Inactive,Discount on total bill
+78027,1372,1638014405,1659483680,59813,Inactive,"2 for 1 on specific menu items"
+78139,1372,1638100801,1659483680,64276,Inactive,Discount on total bill
+78140,1372,1638100801,1659483680,64276,Inactive,Discount on total bill
+78141,417,1638100801,1659483680,59897,Inactive,"2 for 1 on specific menu items"
+78142,417,1638100801,1659483680,59897,Inactive,"2 for 1 on specific menu items"
+78143,1372,1638100801,1659483680,64276,Inactive,Discount on total bill
+78149,417,1638111901,1659483680,59897,Inactive,"2 for 1 on specific menu items"
+78152,417,1638117481,1659483680,59897,Inactive,"2 for 1 on specific menu items"
+78168,417,1638133201,1659483700,59897,Inactive,"2 for 1 on specific menu items"
+78169,417,1638133201,1659483700,59897,Inactive,"2 for 1 on specific menu items"
+78271,417,1638273600,1659483721,59897,Inactive,"2 for 1 on specific menu items"
+78272,1372,1638273600,1659483721,64276,Inactive,Discount on total bill
+78273,1372,1638273600,1659483721,64276,Inactive,Discount on total bill
+78274,1372,1638273600,1659483721,64276,Inactive,Discount on total bill
+78275,417,1638273601,1659483721,59897,Inactive,"2 for 1 on specific menu items"
+78276,417,1638273601,1659483733,59897,Inactive,"2 for 1 on specific menu items"
+78345,1372,1638446400,1659483733,64276,Inactive,Discount on total bill
+78346,1372,1638446400,1659483733,64276,Inactive,Discount on total bill
+78347,417,1638446400,1659483733,59897,Inactive,"2 for 1 on specific menu items"
+78348,417,1638446400,1659483733,59897,Inactive,"2 for 1 on specific menu items"
+78349,417,1638446400,1659483733,59897,Inactive,"2 for 1 on specific menu items"
+78355,1372,1638446401,1659483733,64276,Inactive,Discount on total bill
+78473,1372,1638619200,1659483733,64276,Inactive,Discount on total bill
+78474,1372,1638619200,1659483733,64276,Inactive,Discount on total bill
+78475,417,1638619200,1659483733,59897,Inactive,"2 for 1 on specific menu items"
+78476,1372,1638619200,1659483756,64276,Inactive,Discount on total bill
+78477,417,1638619201,1659483756,59897,Inactive,"2 for 1 on specific menu items"
+78503,417,1638634801,1659483756,59897,Inactive,"2 for 1 on specific menu items"
+78505,417,1638641581,1659483756,59897,Inactive,"2 for 1 on specific menu items"
+78534,417,1638715741,1659483756,59897,Inactive,"2 for 1 on specific menu items"
+78568,1372,1638792000,1659483756,64276,Inactive,Discount on total bill
+78569,417,1638792000,1659483756,59897,Inactive,"2 for 1 on specific menu items"
+78570,1372,1638792000,1659483756,64276,Inactive,Discount on total bill
+78571,1372,1638792000,1659483756,64276,Inactive,Discount on total bill
+78591,1372,1638964800,1659483756,64276,Inactive,Discount on total bill
+78592,417,1638964800,1659483782,59897,Inactive,"2 for 1 on specific menu items"
+78593,1372,1638964800,1659483782,64276,Inactive,Discount on total bill
+78594,1372,1638964800,1659483782,64276,Inactive,Discount on total bill
+78643,417,1639065361,1659483782,59897,Inactive,"2 for 1 on specific menu items"
+78657,417,1639077541,1659483782,59897,Inactive,"2 for 1 on specific menu items"
+78681,1372,1639137601,1659483782,64276,Inactive,Discount on total bill
+78682,1372,1639137601,1659483782,64276,Inactive,Discount on total bill
+78683,1372,1639137601,1659483782,64276,Inactive,Discount on total bill
+78684,417,1639137601,1659483782,59897,Inactive,"2 for 1 on specific menu items"
+78689,417,1639164181,1659483782,59897,Inactive,"2 for 1 on specific menu items"
+78716,417,1639224001,1659483807,59897,Inactive,"2 for 1 on specific menu items"
+78747,417,1639300500,1659483807,59897,Inactive,"2 for 1 on specific menu items"
+78749,1372,1639310400,1659483807,64276,Inactive,Discount on total bill
+78750,1372,1639310400,1659483807,64276,Inactive,Discount on total bill
+78751,417,1639310400,1659483807,59897,Inactive,"2 for 1 on specific menu items"
+78755,1372,1639310401,1659483807,64276,Inactive,Discount on total bill
+78756,417,1639310401,1659483807,59897,Inactive,"2 for 1 on specific menu items"
+78764,417,1639396801,1659483807,59897,Inactive,"2 for 1 on specific menu items"
+78787,1372,1639483201,1659483807,64276,Inactive,Discount on total bill
+78788,417,1639483201,1659483807,59897,Inactive,"2 for 1 on specific menu items"
+78789,417,1639483201,1659483837,59897,Inactive,"2 for 1 on specific menu items"
+78790,1372,1639483201,1659483837,64276,Inactive,Discount on total bill
+78791,1372,1639483201,1659483837,64276,Inactive,Discount on total bill
+78804,417,1639569600,1659483837,59897,Inactive,"2 for 1 on specific menu items"
+78895,1372,1639656001,1659483837,64276,Inactive,Discount on total bill
+78896,1372,1639656001,1659483837,64276,Inactive,Discount on total bill
+78897,417,1639656001,1659483837,59897,Inactive,"2 for 1 on specific menu items"
+78898,1372,1639656001,1659483837,64276,Inactive,Discount on total bill
+78899,417,1639656001,1659483837,59897,Inactive,"2 for 1 on specific menu items"
+78905,417,1639667101,1659483837,59897,Inactive,"2 for 1 on specific menu items"
+78939,417,1639680000,1659483861,59897,Inactive,"2 for 1 on specific menu items"
+78994,1372,1639828801,1659483861,64276,Inactive,Discount on total bill
+78995,1372,1639828801,1659483861,64276,Inactive,Discount on total bill
+78998,417,1639828806,1659483861,59897,Inactive,"2 for 1 on specific menu items"
+78999,417,1639828806,1659483861,59897,Inactive,"2 for 1 on specific menu items"
+79000,417,1639828806,1659483861,59897,Inactive,"2 for 1 on specific menu items"
+79042,417,1640001600,1659483861,59897,Inactive,"2 for 1 on specific menu items"
+79043,1372,1640001600,1659483861,64276,Inactive,Discount on total bill
+79044,417,1640001600,1659483861,59897,Inactive,"2 for 1 on specific menu items"
+79045,1372,1640001600,1659483861,64276,Inactive,Discount on total bill
+79046,417,1640001600,1659483890,59897,Inactive,"2 for 1 on specific menu items"
+79121,417,1640097480,1659483890,59897,Inactive,"2 for 1 on specific menu items"
+79123,417,1640102761,1659483890,59897,Inactive,"2 for 1 on specific menu items"
+79147,1372,1640174401,1659483890,64276,Inactive,Discount on total bill
+79148,1372,1640174401,1659483890,64276,Inactive,Discount on total bill
+79149,417,1640174401,1659483890,59897,Inactive,"2 for 1 on specific menu items"
+79150,417,1640174401,1659483890,59897,Inactive,"2 for 1 on specific menu items"
+79151,417,1640174401,1659483890,59897,Inactive,"2 for 1 on specific menu items"
+79179,1372,1640347201,1659483890,64276,Inactive,Discount on total bill
+79180,417,1640347201,1659483890,59897,Inactive,"2 for 1 on specific menu items"
+79181,1372,1640347201,1659483925,64276,Inactive,Discount on total bill
+79182,417,1640347201,1659483925,59897,Inactive,"2 for 1 on specific menu items"
+79183,417,1640347201,1659483925,59897,Inactive,"2 for 1 on specific menu items"
+79212,417,1640520000,1659483925,59897,Inactive,"2 for 1 on specific menu items"
+79213,417,1640520000,1659483925,59897,Inactive,"2 for 1 on specific menu items"
+79214,1372,1640520000,1659483925,64276,Inactive,Discount on total bill
+79215,1372,1640520000,1659483925,64276,Inactive,Discount on total bill
+79216,417,1640520001,1659483925,59897,Inactive,"2 for 1 on specific menu items"
+79229,417,1640606400,1659483925,59897,Inactive,"2 for 1 on specific menu items"
+79253,417,1640692800,1659483925,59897,Inactive,"2 for 1 on specific menu items"
+79254,417,1640692800,1659483959,59897,Inactive,"2 for 1 on specific menu items"
+79255,1372,1640692800,1659483959,64276,Inactive,Discount on total bill
+79256,417,1640692801,1659483959,59897,Inactive,"2 for 1 on specific menu items"
+79261,1372,1640692802,1659483959,64276,Inactive,Discount on total bill
+79269,417,1640779201,1659483959,59897,Inactive,"2 for 1 on specific menu items"
+79318,1372,1640865600,1659483959,64276,Inactive,Discount on total bill
+79319,417,1640865600,1659483959,59897,Inactive,"2 for 1 on specific menu items"
+79320,417,1640865600,1659483959,59897,Inactive,"2 for 1 on specific menu items"
+79321,417,1640865600,1659483959,59897,Inactive,"2 for 1 on specific menu items"
+79326,417,1640889180,1659483959,64276,Inactive,Discount on specific menu items
+79327,417,1640889180,1659483990,64276,Inactive,Discount on specific menu items
+79335,417,1640952000,1659483990,59897,Inactive,"2 for 1 on specific menu items"
+79369,417,1641038400,1659483990,59897,Inactive,"2 for 1 on specific menu items"
+79370,417,1641038400,1659483990,59897,Inactive,"2 for 1 on specific menu items"
+79371,1372,1641038400,1659483990,64276,Inactive,Discount on total bill
+79372,417,1641038401,1659483990,59897,Inactive,"2 for 1 on specific menu items"
+79382,417,1641124800,1659483990,59897,Inactive,"2 for 1 on specific menu items"
+79405,417,1641211200,1659483990,59897,Inactive,"2 for 1 on specific menu items"
+79406,1372,1641211200,1659483990,64276,Inactive,Discount on total bill
+79407,417,1641211200,1659483990,59897,Inactive,"2 for 1 on specific menu items"
+79408,417,1641211200,1659484026,59897,Inactive,"2 for 1 on specific menu items"
+79424,417,1641297601,1659484026,59897,Inactive,"2 for 1 on specific menu items"
+79425,417,1641297601,1659484026,59897,Inactive,"2 for 1 on specific menu items"
+79452,417,1641384001,1659484026,59897,Inactive,"2 for 1 on specific menu items"
+79453,1372,1641384001,1659484026,64276,Inactive,Discount on total bill
+79454,417,1641384001,1659484026,59897,Inactive,"2 for 1 on specific menu items"
+79468,417,1641470401,1659484026,59897,Inactive,"2 for 1 on specific menu items"
+79469,417,1641470401,1659484026,59897,Inactive,"2 for 1 on specific menu items"
+79748,1372,1641643201,1659484026,64276,Inactive,Discount on total bill
+79749,417,1641643202,1659484026,59897,Inactive,"2 for 1 on specific menu items"
+79772,417,1641729601,1659484062,59897,Inactive,"2 for 1 on specific menu items"
+79773,417,1641729601,1659484062,59897,Inactive,"2 for 1 on specific menu items"
+79812,417,1641902401,1659484062,59897,Inactive,"2 for 1 on specific menu items"
+80166,417,1644009421,1659484062,59897,Inactive,"2 for 1 on specific menu items"
+80169,417,1644048541,1659484083,59897,Inactive,"2 for 1 on specific menu items"
+84361,417,1647943749,1659484116,65417,Inactive,All you can eat
+84364,417,1647944155,1647944155,65417,Inactive,All you can eat
+84367,417,1647944451,1647944451,65417,Inactive,All you can eat
+84376,417,1647944155,1647956701,65417,Inactive,All you can eat
+84378,417,1647944451,1647956701,65417,Inactive,All you can eat
+86884,417,1647943749,1659484116,65417,Inactive,All you can eat
+86901,417,1647943749,1659484316,65417,Inactive,All you can eat
+86912,417,1647943749,1659484316,65417,Inactive,All you can eat
+86938,417,1647943749,1659484316,65417,Inactive,All you can eat
+86978,417,1647943749,1659484316,65417,Inactive,All you can eat
+87000,417,1647943749,1659484316,65417,Inactive,All you can eat
+87063,417,1647943749,1659484316,65417,Inactive,All you can eat
+87091,417,1647943749,1659484316,65417,Inactive,All you can eat
+87106,417,1647943749,1659484316,65417,Inactive,All you can eat
+87143,417,1647943749,1659484316,65417,Inactive,All you can eat
+87154,417,1647943749,1659484316,65417,Inactive,All you can eat
+87164,417,1647943749,1649252781,65417,Inactive,All you can eat
+87174,417,1647943749,1649254527,65417,Inactive,All you can eat
+87181,417,1647943749,1649257247,65417,Inactive,All you can eat
+87299,417,1647943749,1649269145,65417,Inactive,All you can eat
+87327,417,1647943749,1649340601,65417,Inactive,All you can eat
+88031,417,1649679953,1649862001,64276,Inactive,Discount on total bill
+88472,417,1647943749,1649841181,65417,Inactive,All you can eat
+88503,417,1647943749,1649844663,65417,Inactive,All you can eat
+88544,417,1647943749,1649860827,65417,Inactive,All you can eat
+88592,417,1647943749,1649864816,65417,Inactive,All you can eat
+88598,417,1647943749,1649864696,65417,Inactive,All you can eat
+88617,417,1647943749,1649875801,65417,Inactive,All you can eat
+88645,417,1647943749,1649877301,65417,Inactive,All you can eat
+88661,417,1647943749,1649877901,65417,Inactive,All you can eat
+88663,417,1647944451,1649877901,65417,Inactive,All you can eat
+88697,417,1647943749,1649883001,65417,Inactive,All you can eat
+88713,417,1647943749,1649878801,65417,Inactive,All you can eat
+88722,417,1647943749,1649878801,65417,Inactive,All you can eat
+88752,417,1647943749,1649867964,65417,Inactive,All you can eat
+88758,417,1647943749,1649878801,65417,Inactive,All you can eat
+88780,417,1647943749,1649879101,65417,Inactive,All you can eat
+88817,417,1647943749,1649879101,65417,Inactive,All you can eat
+88907,417,1647943749,1649879402,65417,Inactive,All you can eat
+89023,417,1647944155,1649882701,65417,Inactive,All you can eat
+89082,417,1647943749,1649891101,65417,Inactive,All you can eat
+89151,417,1647943749,1649898301,65417,Inactive,All you can eat
+89157,417,1647943749,1649898301,65417,Inactive,All you can eat
+89173,417,1647943749,1649890520,65417,Inactive,All you can eat
+89926,417,1647943749,1650556174,65417,Inactive,All you can eat
+90383,417,1647944155,1650802457,65417,Inactive,All you can eat
+90410,417,1647943749,1650805596,65417,Inactive,All you can eat
+90432,417,1647943749,1650811681,65417,Inactive,All you can eat
+90440,417,1647944155,1650811821,65417,Inactive,All you can eat
+90481,417,1647943749,1650819035,65417,Inactive,All you can eat
+90490,417,1647943749,1650819235,65417,Inactive,All you can eat
+90498,417,1647943749,1650819998,65417,Inactive,All you can eat
+90510,417,1647943749,1650820997,65417,Inactive,All you can eat
+90516,417,1647943749,1650821595,65417,Inactive,All you can eat
+90534,417,1647943749,1650821858,65417,Inactive,All you can eat
+90540,417,1647943749,1650822305,65417,Inactive,All you can eat
+90544,417,1647943749,1650829609,65417,Inactive,All you can eat
+90548,417,1647943749,1650829591,65417,Inactive,All you can eat
+90555,417,1647943749,1650824624,65417,Inactive,All you can eat
+90619,417,1647944155,1650829578,65417,Inactive,All you can eat
+90625,417,1647943749,1650828086,65417,Inactive,All you can eat
+90698,417,1647944155,1650832157,65417,Inactive,All you can eat
+90706,417,1647944155,1650833752,65417,Inactive,All you can eat
+90707,417,1647943749,1650833752,65417,Inactive,All you can eat
+90713,417,1647944451,1650833752,65417,Inactive,All you can eat
+90724,417,1647944155,1650833830,65417,Inactive,All you can eat
+90730,417,1647944155,1650833910,65417,Inactive,All you can eat
+90738,417,1647944155,1650833958,65417,Inactive,All you can eat
+90744,417,1647944155,1650833989,65417,Inactive,All you can eat
+90750,417,1647944155,1650834020,65417,Inactive,All you can eat
+90756,417,1647944155,1650834960,65417,Inactive,All you can eat
+90764,417,1647944451,1650834960,65417,Inactive,All you can eat
+90774,417,1647943749,1650834960,65417,Inactive,All you can eat
+90780,417,1647944155,1650835894,65417,Inactive,All you can eat
+90787,417,1647944155,1650835905,65417,Inactive,All you can eat
+90799,417,1647944155,1650846901,65417,Inactive,All you can eat
+90814,417,1647944451,1650847801,65417,Inactive,All you can eat
+90815,417,1647944155,1650847801,65417,Inactive,All you can eat
+90819,417,1647944155,1650847801,65417,Inactive,All you can eat
+90825,417,1647943749,1650847801,65417,Inactive,All you can eat
+90826,417,1647944155,1650847801,65417,Inactive,All you can eat
+90827,417,1647944451,1650847801,65417,Inactive,All you can eat
+90831,417,1647943749,1650847801,65417,Inactive,All you can eat
+90836,417,1647943749,1650847801,65417,Inactive,All you can eat
+90837,417,1647944155,1650847801,65417,Inactive,All you can eat
+90842,417,1647943749,1650847801,65417,Inactive,All you can eat
+90843,417,1647944155,1650847801,65417,Inactive,All you can eat
+90882,417,1647943749,1650858453,65417,Inactive,All you can eat
+90886,417,1647943749,1650858643,65417,Inactive,All you can eat
+90902,417,1647943749,1650858568,65417,Inactive,All you can eat
+91100,417,1647943749,1651045820,65417,Inactive,All you can eat
+91104,417,1647943749,1651045776,65417,Inactive,All you can eat
+91128,417,1647943749,1651056963,65417,Inactive,All you can eat
+91173,417,1647943749,1651070025,65417,Inactive,All you can eat
+91194,417,1647943749,1651071353,65417,Inactive,All you can eat
+91202,417,1647943749,1651074188,65417,Inactive,All you can eat
+91213,417,1647943749,1651078787,65417,Inactive,All you can eat
+91222,417,1647943749,1651082479,65417,Inactive,All you can eat
+91255,417,1647943749,1651088013,65417,Inactive,All you can eat
+91259,417,1647943749,1651080640,65417,Inactive,All you can eat
+91263,417,1647943749,1651078917,65417,Inactive,All you can eat
+91267,417,1647943749,1651085815,65417,Inactive,All you can eat
+91278,417,1647943749,1651080724,65417,Inactive,All you can eat
+91303,417,1647943749,1651080824,65417,Inactive,All you can eat
+91383,417,1647943749,1651081716,65417,Inactive,All you can eat
+91387,417,1647943749,1651081367,65417,Inactive,All you can eat
+91410,417,1647943749,1651088101,65417,Inactive,All you can eat
+91434,417,1647943749,1651089325,65417,Inactive,All you can eat
+91438,417,1647943749,1651082358,65417,Inactive,All you can eat
+91531,417,1647943749,1651086443,65417,Inactive,All you can eat
+91606,417,1647943749,1651084929,65417,Inactive,All you can eat
+91621,417,1647943749,1651083764,65417,Inactive,All you can eat
+91648,417,1647944451,1651089325,65417,Inactive,All you can eat
+91660,417,1647943749,1651089306,65417,Inactive,All you can eat
+91723,417,1647943749,1651088284,65417,Inactive,All you can eat
+91784,417,1647943749,1651088582,65417,Inactive,All you can eat
+91788,417,1647943749,1651088871,65417,Inactive,All you can eat
+91914,417,1647943749,1651096201,65417,Inactive,All you can eat
+92020,417,1647943749,1651163127,65417,Inactive,All you can eat
+92057,417,1647943749,1651164368,65417,Inactive,All you can eat
+92083,417,1647943749,1651168232,65417,Inactive,All you can eat
+92087,417,1647943749,1651170050,65417,Inactive,All you can eat
+92094,417,1647943749,1651170941,65417,Inactive,All you can eat
+92114,417,1647943749,1651170394,65417,Inactive,All you can eat
+92133,417,1647943749,1651169214,65417,Inactive,All you can eat
+92202,417,1647943749,1651171511,65417,Inactive,All you can eat
+92228,417,1647943749,1651172666,65417,Inactive,All you can eat
+92270,417,1647943749,1651167900,65417,Inactive,All you can eat
+92296,417,1647943749,1651171577,65417,Inactive,All you can eat
+92300,417,1647943749,1651171943,65417,Inactive,All you can eat
+92370,417,1647943749,1651171995,65417,Inactive,All you can eat
+92384,417,1647943749,1651172065,65417,Inactive,All you can eat
+92475,417,1647943749,1651174416,65417,Inactive,All you can eat
+92508,417,1647943749,1651172230,65417,Inactive,All you can eat
+92630,417,1647943749,1651174983,65417,Inactive,All you can eat
+92631,417,1647944451,1651174983,65417,Inactive,All you can eat
+92642,417,1647943749,1651174653,65417,Inactive,All you can eat
+92736,417,1647943749,1651175717,65417,Inactive,All you can eat
+92819,417,1647943749,1651185301,65417,Inactive,All you can eat
+92854,417,1647944155,1651255201,65417,Inactive,All you can eat
+92858,417,1647944155,1651254171,65417,Inactive,All you can eat
+92862,417,1647944155,1651254154,65417,Inactive,All you can eat
+92866,417,1647944155,1651259722,65417,Inactive,All you can eat
+92905,417,1647944155,1651254236,65417,Inactive,All you can eat
+92945,417,1647944155,1651255377,65417,Inactive,All you can eat
+92949,417,1647944155,1651258342,65417,Inactive,All you can eat
+93016,417,1647944155,1651254716,65417,Inactive,All you can eat
+93020,417,1647944155,1651258270,65417,Inactive,All you can eat
+93024,417,1647944155,1651261990,65417,Inactive,All you can eat
+93083,417,1647944155,1651259293,65417,Inactive,All you can eat
+93093,417,1647944155,1651258380,65417,Inactive,All you can eat
+93100,417,1647944155,1651262401,65417,Inactive,All you can eat
+93184,417,1647944155,1651263001,65417,Inactive,All you can eat
+93197,417,1647944155,1651263001,65417,Inactive,All you can eat
+93224,417,1647944155,1651258130,65417,Inactive,All you can eat
+93225,417,1647944451,1651258130,65417,Inactive,All you can eat
+93229,417,1647944155,1651263301,65417,Inactive,All you can eat
+93235,417,1647944155,1651263601,65417,Inactive,All you can eat
+93338,417,1647944155,1651264501,65417,Inactive,All you can eat
+93403,417,1647944155,1651259620,65417,Inactive,All you can eat
+93413,417,1647944155,1651262004,65417,Inactive,All you can eat
+93418,417,1647944155,1651261668,65417,Inactive,All you can eat
+93534,417,1647944155,1651267801,65417,Inactive,All you can eat
+93540,417,1647944155,1651262018,65417,Inactive,All you can eat
+93709,417,1647943749,1651323609,65417,Inactive,All you can eat
+93721,417,1647943749,1651323594,65417,Inactive,All you can eat
+93742,417,1647943749,1651326027,65417,Inactive,All you can eat
+93750,417,1647943749,1651327953,65417,Inactive,All you can eat
+93770,417,1647944155,1651333287,65417,Inactive,All you can eat
+100911,417,1654262026,1654262026,59897,Inactive,All you can eat
+100921,417,1654262026,1654263932,59897,Inactive,All you can eat
+100935,417,1654262026,1654271401,59897,Inactive,All you can eat
+101286,417,1654262026,1654359001,59897,Inactive,All you can eat
+101956,417,1647944155,1654604500,65417,Inactive,All you can eat
+101962,417,1654262026,1654607402,59897,Inactive,All you can eat
+104351,417,1655321525,1655321525,102096,Inactive,All you can eat
+104357,417,1655321525,1655323255,102096,Inactive,All you can eat
+104380,417,1655321525,1655326470,102096,Inactive,All you can eat
+104403,417,1655321525,1655329410,102096,Inactive,All you can eat
+104421,417,1655321525,1655336637,102096,Inactive,All you can eat
+104425,417,1655321525,1655336443,102096,Inactive,All you can eat
+104593,417,1655321525,1655418301,102096,Inactive,All you can eat
+104597,417,1655321525,1655418301,102096,Inactive,All you can eat
+106557,424,1655984616,1655984616,102096,Inactive,Freebie
+120162,417,1657714567,1660392001,94025,Inactive,Discount on specific menu items
+120164,417,1657714645,1660393201,94025,Inactive,Discount on specific menu items
+124482,417,1658309160,1658388012,106493,Inactive,Freebie
+133542,424,1659266671,1659276001,59897,Inactive,Goodie bag
+139598,417,1659876781,1659883852,59897,Inactive,Goodie bag
+154062,417,1655321525,1661293501,102096,Inactive,All you can eat
+154075,417,1655321525,1661251091,102096,Inactive,All you can eat
+154231,417,1655321525,1661310901,102096,Inactive,All you can eat
+154955,417,1655321525,1661379601,102096,Inactive,All you can eat
+155714,417,1655321525,1661459701,102096,Inactive,All you can eat
+155764,417,1655321525,1661461201,102096,Inactive,All you can eat
+156585,424,1661505569,1661505569,59897,Inactive,"2 for 1 on specific menu items"
+167053,2608,1662468944,1662468944,59897,Inactive,"2 for 1 on specific menu items"
+204299,417,1647943749,1667592901,65417,Inactive,All you can eat
+227964,424,1673124865,1675202101,59897,Inactive,Freebie

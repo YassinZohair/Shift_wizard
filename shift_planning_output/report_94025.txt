@@ -1,0 +1,33 @@
+======================================================================
+SHIFT PLANNING REPORT - Place 94025
+Generated: 2026-02-04 08:52
+======================================================================
+
+📊 MODEL PERFORMANCE
+----------------------------------------
+  Mean Absolute Error: 1.35 orders
+  RMSE: 2.05 orders
+
+📅 WEEKLY SUMMARY
+----------------------------------------
+  Saturday   | Orders:   52 | Staff: 2-2 (avg: 2.0)
+  Sunday     | Orders:   52 | Staff: 2-2 (avg: 2.0)
+  Monday     | Orders:   43 | Staff: 2-2 (avg: 2.0)
+  Tuesday    | Orders:   43 | Staff: 2-2 (avg: 2.0)
+  Wednesday  | Orders:   43 | Staff: 2-2 (avg: 2.0)
+  Thursday   | Orders:   43 | Staff: 2-2 (avg: 2.0)
+  Friday     | Orders:   48 | Staff: 2-2 (avg: 2.0)
+
+🚨 STAFFING ALERTS
+----------------------------------------
+  No staffing alerts - schedule looks good!
+
+📈 TOP FEATURES (Model Importance)
+----------------------------------------
+  place_id             61.1%
+  hour                 17.0%
+  day_of_week          6.0%
+  week_of_year         5.8%
+  day_of_month         4.6%
+
+======================================================================
