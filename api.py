@@ -416,6 +416,203 @@ async def replan(request: DisruptionRequest):
         "total_additional_staff_hours": sum(h['change'] for h in adjusted_hours)
     }
 
+@app.post("/api/smart-alerts")
+async def get_smart_alerts(request: ForecastRequest):
+    """
+    AI-powered smart alerts with actionable recommendations.
+    Analyzes the forecast and provides specific staffing suggestions.
+    """
+    if state.model is None:
+        raise HTTPException(status_code=503, detail="Model not trained yet")
+    
+    try:
+        start_date = datetime.strptime(request.start_date, '%Y-%m-%d')
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid date format. Use YYYY-MM-DD")
+    
+    # Generate predictions
+    predictions = predict_demand(request.place_id, start_date, request.days)
+    schedule = calculate_staffing(
+        predictions,
+        request.orders_per_staff,
+        request.min_staff,
+        request.max_staff
+    )
+    
+    alerts = []
+    
+    # Analyze each day for potential issues
+    for date in schedule['date'].unique():
+        day_data = schedule[schedule['date'] == date]
+        day_name = day_data['day_name'].iloc[0]
+        
+        # Find peak hours
+        peak_hour_data = day_data.loc[day_data['predicted_orders'].idxmax()]
+        peak_hour = int(peak_hour_data['hour'])
+        peak_orders = int(peak_hour_data['predicted_orders'])
+        peak_staff = int(peak_hour_data['staff_needed'])
+        
+        # Find low demand periods
+        low_hour_data = day_data.loc[day_data['predicted_orders'].idxmin()]
+        low_hour = int(low_hour_data['hour'])
+        low_orders = int(low_hour_data['predicted_orders'])
+        low_staff = int(low_hour_data['staff_needed'])
+        
+        # Calculate daily metrics
+        total_orders = int(day_data['predicted_orders'].sum())
+        avg_orders = day_data['predicted_orders'].mean()
+        max_staff_needed = int(day_data['staff_needed'].max())
+        min_staff_needed = int(day_data['staff_needed'].min())
+        
+        # ALERT TYPE 1: Demand Spike Detection
+        # If peak is significantly higher than average
+        if peak_orders > avg_orders * 1.5 and peak_orders > 5:
+            alerts.append({
+                "id": f"spike_{date.strftime('%Y%m%d')}_{peak_hour}",
+                "type": "demand_spike",
+                "severity": "high" if peak_orders > avg_orders * 2 else "medium",
+                "date": date.strftime('%Y-%m-%d'),
+                "day_name": day_name,
+                "hour": peak_hour,
+                "shift": get_shift(peak_hour),
+                "title": f"Demand Spike Expected",
+                "description": f"Peak demand of {peak_orders} orders expected at {peak_hour}:00",
+                "current_metric": int(avg_orders),
+                "predicted_metric": peak_orders,
+                "recommendation": {
+                    "action": "increase_staff",
+                    "staff_needed": peak_staff,
+                    "additional_staff": max(0, peak_staff - request.min_staff),
+                    "message": f"Schedule {peak_staff} staff members for the {get_shift(peak_hour)} shift ({peak_hour}:00-{peak_hour+1}:00). This is {max(0, peak_staff - request.min_staff)} more than minimum staffing.",
+                    "cost_impact": f"Additional labor cost: ~{max(0, peak_staff - request.min_staff) * 15}$/hr",
+                    "risk_if_ignored": "Customer wait times may increase by 50-100%, potential loss of customers"
+                }
+            })
+        
+        # ALERT TYPE 2: Low Demand Period (Overstaffing Risk)
+        if low_orders < avg_orders * 0.5 and request.min_staff > 1:
+            potential_savings = request.min_staff - max(1, low_staff)
+            if potential_savings > 0:
+                alerts.append({
+                    "id": f"low_{date.strftime('%Y%m%d')}_{low_hour}",
+                    "type": "low_demand",
+                    "severity": "low",
+                    "date": date.strftime('%Y-%m-%d'),
+                    "day_name": day_name,
+                    "hour": low_hour,
+                    "shift": get_shift(low_hour),
+                    "title": f"Low Demand Period",
+                    "description": f"Only {low_orders} orders expected at {low_hour}:00",
+                    "current_metric": request.min_staff,
+                    "predicted_metric": low_orders,
+                    "recommendation": {
+                        "action": "reduce_staff",
+                        "staff_needed": max(1, low_staff),
+                        "reduction": potential_savings,
+                        "message": f"Consider reducing staff to {max(1, low_staff)} during {low_hour}:00-{low_hour+1}:00. Potential to reduce by {potential_savings} staff member(s).",
+                        "cost_impact": f"Potential savings: ~{potential_savings * 15}$/hr",
+                        "risk_if_ignored": "Overstaffing leads to unnecessary labor costs"
+                    }
+                })
+        
+        # ALERT TYPE 3: Weekend Rush
+        if day_name in ['Saturday', 'Sunday'] and total_orders > 50:
+            alerts.append({
+                "id": f"weekend_{date.strftime('%Y%m%d')}",
+                "type": "weekend_rush",
+                "severity": "medium",
+                "date": date.strftime('%Y-%m-%d'),
+                "day_name": day_name,
+                "hour": None,
+                "shift": "All Day",
+                "title": f"Weekend Rush - {day_name}",
+                "description": f"Higher demand expected: {total_orders} total orders",
+                "current_metric": None,
+                "predicted_metric": total_orders,
+                "recommendation": {
+                    "action": "prepare_weekend",
+                    "staff_needed": max_staff_needed,
+                    "message": f"Ensure {max_staff_needed} staff available during peak hours. Consider having 1-2 on-call staff ready.",
+                    "cost_impact": "Plan for 20-30% higher labor costs than weekdays",
+                    "risk_if_ignored": "Long wait times, negative customer reviews"
+                }
+            })
+        
+        # ALERT TYPE 4: Lunch Rush
+        lunch_data = day_data[(day_data['hour'] >= 11) & (day_data['hour'] <= 14)]
+        if len(lunch_data) > 0:
+            lunch_orders = int(lunch_data['predicted_orders'].sum())
+            lunch_peak = int(lunch_data['predicted_orders'].max())
+            if lunch_peak > avg_orders * 1.3:
+                alerts.append({
+                    "id": f"lunch_{date.strftime('%Y%m%d')}",
+                    "type": "lunch_rush",
+                    "severity": "medium",
+                    "date": date.strftime('%Y-%m-%d'),
+                    "day_name": day_name,
+                    "hour": 12,
+                    "shift": "Afternoon",
+                    "title": "Lunch Rush Expected",
+                    "description": f"Peak lunch demand: {lunch_peak} orders/hour",
+                    "current_metric": int(avg_orders),
+                    "predicted_metric": lunch_peak,
+                    "recommendation": {
+                        "action": "prepare_lunch",
+                        "staff_needed": int(lunch_data['staff_needed'].max()),
+                        "message": f"Schedule {int(lunch_data['staff_needed'].max())} staff for lunch shift (11:00-14:00). Prep ingredients before 11:00.",
+                        "cost_impact": None,
+                        "risk_if_ignored": "Lunch customers are time-sensitive, may leave if wait is too long"
+                    }
+                })
+        
+        # ALERT TYPE 5: Dinner Rush
+        dinner_data = day_data[(day_data['hour'] >= 18) & (day_data['hour'] <= 21)]
+        if len(dinner_data) > 0:
+            dinner_peak = int(dinner_data['predicted_orders'].max())
+            if dinner_peak > avg_orders * 1.3:
+                alerts.append({
+                    "id": f"dinner_{date.strftime('%Y%m%d')}",
+                    "type": "dinner_rush",
+                    "severity": "medium",
+                    "date": date.strftime('%Y-%m-%d'),
+                    "day_name": day_name,
+                    "hour": 19,
+                    "shift": "Evening",
+                    "title": "Dinner Rush Expected",
+                    "description": f"Peak dinner demand: {dinner_peak} orders/hour",
+                    "current_metric": int(avg_orders),
+                    "predicted_metric": dinner_peak,
+                    "recommendation": {
+                        "action": "prepare_dinner",
+                        "staff_needed": int(dinner_data['staff_needed'].max()),
+                        "message": f"Schedule {int(dinner_data['staff_needed'].max())} staff for dinner shift (18:00-21:00).",
+                        "cost_impact": None,
+                        "risk_if_ignored": "Dinner is typically highest revenue period"
+                    }
+                })
+    
+    # Sort alerts by severity
+    severity_order = {"high": 0, "medium": 1, "low": 2}
+    alerts.sort(key=lambda x: (severity_order.get(x["severity"], 3), x["date"]))
+    
+    # Summary stats
+    summary = {
+        "total_alerts": len(alerts),
+        "high_severity": len([a for a in alerts if a["severity"] == "high"]),
+        "medium_severity": len([a for a in alerts if a["severity"] == "medium"]),
+        "low_severity": len([a for a in alerts if a["severity"] == "low"]),
+        "total_predicted_orders": int(schedule['predicted_orders'].sum()),
+        "avg_daily_orders": int(schedule.groupby('date')['predicted_orders'].sum().mean()),
+        "peak_staff_needed": int(schedule['staff_needed'].max()),
+        "estimated_labor_hours": int(schedule['staff_needed'].sum())
+    }
+    
+    return {
+        "summary": summary,
+        "alerts": alerts
+    }
+
+
 @app.get("/api/historical/{place_id}")
 async def get_historical(place_id: float):
     """Get historical demand patterns for a place."""
