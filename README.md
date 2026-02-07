@@ -1,20 +1,19 @@
-# 📊 Shift Planning Decision Assistant
+#  Shift Planning Decision Assistant
 
 > AI-powered demand forecasting and staffing optimization for Quick Service Restaurants
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Restaurants struggle with **unstable demand** and **staffing inefficiencies**:
 
-- 📈 Sudden demand spikes (weekends, viral social media, events)
-- 📞 Call-offs that break schedules
-- 💸 Overstaffing increases labor costs
-- 😓 Understaffing hurts service quality and burns out staff
+- Sudden demand spikes (weekends, viral social media, events)
+- Call-offs that break schedules
+- Overstaffing increases labor costs
+- Understaffing hurts service quality and burns out staff
 
-## 💡 Our Solution
+##  Our Solution
 
 A **web-based decision-support system** that:
 
@@ -27,7 +26,7 @@ A **web-based decision-support system** that:
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -77,7 +76,7 @@ Shift_wizard/
 │   └── ...
 │
 ├── 📁 cleaned_data/          # Cleaned datasets (generated)
-│   ├── hourly_demand.csv     # ⭐ Key file for forecasting
+│   ├── hourly_demand.csv     #  Key file for forecasting
 │   ├── fct_orders.csv
 │   └── ...
 │
@@ -98,11 +97,11 @@ Shift_wizard/
 **Purpose:** Cleans and prepares raw data for analysis.
 
 **Features:**
-- ✅ Loads all CSV files from `data/` folder
-- ✅ Standardizes column names (snake_case)
-- ✅ Converts Unix timestamps to datetime
-- ✅ Removes sensitive/PII data (emails, phones, addresses)
-- ✅ Generates `hourly_demand.csv` aggregation
+-  Loads all CSV files from `data/` folder
+-  Standardizes column names (snake_case)
+-  Converts Unix timestamps to datetime
+-  Removes sensitive/PII data (emails, phones, addresses)
+-  Generates `hourly_demand.csv` aggregation
 
 **Input:** Raw CSV files in `data/` folder  
 **Output:** Cleaned CSVs in `cleaned_data/` folder
@@ -118,8 +117,8 @@ python dataloader.py
 **Purpose:** Predicts demand and calculates staffing requirements.
 
 **Features:**
-- 🤖 **Machine Learning Model:** Random Forest Regressor
-- 📊 **Features Used:**
+-  **Machine Learning Model:** Random Forest Regressor
+-  **Features Used:**
   - Place ID
   - Hour of day
   - Day of week
@@ -151,15 +150,15 @@ python shift_planner.py
 **Purpose:** Visual interface for exploring forecasts and managing schedules.
 
 **Features:**
-- 📈 Demand forecast visualization
-- 🗓️ Weekly heatmap of busy periods
-- 👥 Staffing recommendations by shift
-- ⚠️ Alert system for understaffing
-- 🔄 **Real-time re-planning:**
+-  Demand forecast visualization
+-  Weekly heatmap of busy periods
+-  Staffing recommendations by shift
+-  Alert system for understaffing
+-  **Real-time re-planning:**
   - Staff call-off handling
   - Demand spike simulation
   - Event/promotion planning
-- 💾 Export schedules to CSV
+- Export schedules to CSV
 
 ```bash
 streamlit run dashboard.py
@@ -169,7 +168,7 @@ Then open: **http://localhost:8501**
 
 ---
 
-## 📊 Data Schema
+##  Data Schema
 
 ### Input Data (Star Schema)
 
@@ -191,7 +190,7 @@ Then open: **http://localhost:8501**
 
 ---
 
-## 🔄 Real-Time Re-Planning
+##  Real-Time Re-Planning
 
 The dashboard supports handling disruptions in real-time:
 
@@ -218,22 +217,22 @@ Output: System models increased demand
 
 ---
 
-## 🛡️ Security & Privacy
+##  Security & Privacy
 
 This project follows hackathon security requirements:
 
-- ✅ **No sensitive data committed** to repository
-- ✅ **PII removed** during data cleaning:
+-  **No sensitive data committed** to repository
+-  **PII removed** during data cleaning:
   - Emails, phone numbers
   - Customer names, addresses
   - Passwords, API keys
   - GPS coordinates
-- ✅ **No hardcoded credentials**
-- ✅ `data/` folder in `.gitignore`
+-  **No hardcoded credentials**
+-  `data/` folder in `.gitignore`
 
 ---
 
-## 📈 Model Explainability
+##  Model Explainability
 
 The forecasting model is interpretable:
 
@@ -253,7 +252,7 @@ The forecasting model is interpretable:
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ```bash
 # Run the full pipeline
@@ -273,7 +272,7 @@ Expected outputs:
 
 ---
 
-## 🛠️ Configuration
+##  Configuration
 
 ### Adjusting Staffing Parameters
 
@@ -294,7 +293,7 @@ MAX_STAFF_PER_SHIFT = 15        # Physical capacity limit
 
 ---
 
-## 📋 Requirements
+##  Requirements
 
 ```txt
 pandas>=2.0.0
@@ -312,38 +311,22 @@ pip install -r requirements.txt
 
 ---
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👥 Team
+##  Team
 
 Built for **Hackathon 2024** by:
 
 | Team Member | Role | Contributions |
 |-------------|------|---------------|
-| **Yassin Zoheir** | Project Lead & DevOps | GitHub repository setup, version control, project architecture, deployment |
+| **Yassin Zohair** | Project Lead & DevOps | GitHub repo setup, version control, project architecture, deployment |
 | **David Gamal** | Full Stack Developer | API development (FastAPI), React frontend, backend integration, ML pipeline |
-| **Ali Yasser** | Data Engineer | Data cleaning pipeline, ETL process, data validation, CSV processing |
-| **Ahmed Reda** | ML Engineer | Demand forecasting model, feature engineering, model evaluation, accuracy metrics |
+| **Ali Yasser** | ML Engineer | Demand forecasting model, feature engineering, model evaluation, accuracy metrics |
+| **Ahmed Reda** | Data Engineer | Data cleaning pipeline, data validation, CSV processing |
 | **Fady Samer** | Backend Developer | Smart alerts system, staffing calculator, disruption handling, API endpoints |
-| **Omar Elraffa** | UI/UX & Documentation | Dashboard design, user experience, README documentation, presentation materials |
+| **Omar Elraffa** | UI/ & Documentation | Dashboard design, user experience, presentation materials |
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Historical order data provided by hackathon organizers
 - Built with Python, Pandas, Scikit-learn, Streamlit, and Plotly
