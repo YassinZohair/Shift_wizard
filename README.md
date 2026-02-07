@@ -330,7 +330,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Team
 
-Built for **Hackathon 2024** by the Shift Planning Team
+Built for **Hackathon 2024** by:
+
+| Team Member | Role | Contributions |
+|-------------|------|---------------|
+| **Yassin Zoheir** | Project Lead & DevOps | GitHub repository setup, version control, project architecture, deployment |
+| **David Gamal** | Full Stack Developer | API development (FastAPI), React frontend, backend integration, ML pipeline |
+| **Ali Yasser** | Data Engineer | Data cleaning pipeline, ETL process, data validation, CSV processing |
+| **Ahmed Reda** | ML Engineer | Demand forecasting model, feature engineering, model evaluation, accuracy metrics |
+| **Fady Samer** | Backend Developer | Smart alerts system, staffing calculator, disruption handling, API endpoints |
+| **Omar Elraffa** | UI/UX & Documentation | Dashboard design, user experience, README documentation, presentation materials |
 
 ---
 
