@@ -1,0 +1,74 @@
+======================================================================
+  SHIFT PLANNING MODEL - EVALUATION REPORT
+======================================================================
+
+Report Generated: 2026-02-05 19:20:37
+
+----------------------------------------------------------------------
+1. DATA SUMMARY
+----------------------------------------------------------------------
+Total records:     58,737
+Training records:  46,989 (80%)
+Test records:      11,748 (20%)
+Training period:   2021-02-12 to 2024-02-05
+Test period:       2024-02-05 to 2024-02-16
+
+Note: Time-based split used (no data leakage from future)
+
+----------------------------------------------------------------------
+2. MODEL CONFIGURATION
+----------------------------------------------------------------------
+Algorithm:         Random Forest Regressor
+Number of trees:   100
+Max tree depth:    10
+Features used:     9
+  - place_id
+  - hour
+  - day_of_week
+  - day_of_month
+  - month
+  - week_of_year
+  - is_weekend
+  - is_lunch
+  - is_dinner
+
+----------------------------------------------------------------------
+3. REGRESSION METRICS (Test Set Performance)
+----------------------------------------------------------------------
+
+  MAE  (Mean Absolute Error):         1.4554
+  RMSE (Root Mean Squared Error):     2.2710
+  R²   (Coefficient of Determination): 0.1788
+
+Interpretation:
+  • MAE = 1.46: On average, predictions are off by ~1.5 orders
+  • RMSE = 2.27: Accounts for larger errors more heavily
+  • R² = 0.179: Model explains 17.9% of demand variance
+
+----------------------------------------------------------------------
+4. RESIDUAL ANALYSIS
+----------------------------------------------------------------------
+Mean residual:     0.4113 (ideal: 0)
+Std residual:      2.2335
+Min residual:      -8.4942
+Max residual:      23.1349
+
+----------------------------------------------------------------------
+5. OUTPUT FILES
+----------------------------------------------------------------------
+• predicted_vs_actual.png  - Scatter plot of predictions
+• residuals_vs_actual.png  - Error analysis by actual value
+• residuals_histogram.png  - Distribution of prediction errors
+• feature_importance.png   - Which features matter most
+
+----------------------------------------------------------------------
+6. NOTES FOR STAKEHOLDERS
+----------------------------------------------------------------------
+• This is a REGRESSION model (predicts numeric values)
+• Classification metrics (accuracy, precision, recall) do NOT apply
+• Time-based split ensures realistic evaluation
+• Feature importance shows what drives predictions
+
+======================================================================
+  END OF REPORT
+======================================================================

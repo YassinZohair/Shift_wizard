@@ -7,7 +7,7 @@ import {
 } from 'recharts'
 import { 
   Calendar, Users, TrendingUp, AlertTriangle, Clock, 
-  ChevronDown, RefreshCw, Download, Building2
+  ChevronDown, RefreshCw, Download, Building2, Check
 } from 'lucide-react'
 
 // API Base URL
@@ -202,6 +202,165 @@ export default function Dashboard() {
   const [alertsSummary, setAlertsSummary] = useState<any>(null)
   const [showAlerts, setShowAlerts] = useState(false)
   const [loadingAlerts, setLoadingAlerts] = useState(false)
+  const [appliedActions, setAppliedActions] = useState<Set<string>>(new Set())
+  const [staffingAdjustments, setStaffingAdjustments] = useState<any[]>([])
+
+  // Export schedule to CSV
+  const handleExport = () => {
+    if (!forecastData) return
+    
+    // Apply any staffing adjustments to the export
+    const adjustedHourly = forecastData.hourly.map(h => {
+      const adjustment = staffingAdjustments.find(
+        adj => adj.date === h.date && adj.hour === h.hour
+      )
+      return {
+        ...h,
+        staff_needed: adjustment ? adjustment.new_staff : h.staff_needed
+      }
+    })
+    
+    // Create CSV content
+    const headers = ['Date', 'Day', 'Hour', 'Shift', 'Predicted Orders', 'Staff Needed']
+    const rows = adjustedHourly.map(h => [
+      h.date,
+      h.day_name,
+      `${h.hour}:00`,
+      h.shift,
+      h.predicted_orders,
+      h.staff_needed
+    ])
+    
+    const csvContent = [
+      headers.join(','),
+      ...rows.map(row => row.join(','))
+    ].join('\n')
+    
+    // Create and trigger download
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
+    const link = document.createElement('a')
+    const url = URL.createObjectURL(blob)
+    link.setAttribute('href', url)
+    link.setAttribute('download', `shift_schedule_${selectedPlace}_${new Date().toISOString().split('T')[0]}.csv`)
+    link.style.visibility = 'hidden'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
+  // Apply alert recommendation - FULLY FUNCTIONAL
+  const handleApplyAction = (alert: any) => {
+    // Mark this action as applied
+    setAppliedActions(prev => new Set(prev).add(alert.id))
+    
+    if (!forecastData) return
+    
+    // Determine which hours to adjust based on action type
+    let hoursToAdjust: number[] = []
+    let staffIncrease = 0
+    
+    switch (alert.recommendation.action) {
+      case 'increase_staff':
+        // Specific hour adjustment
+        if (alert.hour !== null) {
+          hoursToAdjust = [alert.hour]
+        }
+        staffIncrease = alert.recommendation.additional_staff || 1
+        break
+        
+      case 'reduce_staff':
+        // For reduce, we acknowledge but don't auto-reduce (safety)
+        // Just mark as applied
+        return
+        
+      case 'prepare_weekend':
+        // Increase staff for all hours on weekend days
+        hoursToAdjust = [10, 11, 12, 13, 14, 18, 19, 20, 21] // Peak hours
+        staffIncrease = 1
+        break
+        
+      case 'prepare_lunch':
+        // Increase staff for lunch hours (11-14)
+        hoursToAdjust = [11, 12, 13, 14]
+        staffIncrease = alert.recommendation.staff_needed ? 
+          Math.max(1, alert.recommendation.staff_needed - minStaff) : 1
+        break
+        
+      case 'prepare_dinner':
+        // Increase staff for dinner hours (18-21)
+        hoursToAdjust = [18, 19, 20, 21]
+        staffIncrease = alert.recommendation.staff_needed ? 
+          Math.max(1, alert.recommendation.staff_needed - minStaff) : 1
+        break
+        
+      default:
+        return
+    }
+    
+    // Create adjustments for the forecast data
+    const newAdjustments: any[] = []
+    
+    forecastData.hourly.forEach(h => {
+      // Check if this hour should be adjusted
+      const matchesDate = alert.date ? h.date === alert.date : true
+      const matchesHour = hoursToAdjust.length === 0 || hoursToAdjust.includes(h.hour)
+      
+      if (matchesDate && matchesHour) {
+        const newStaff = Math.min(h.staff_needed + staffIncrease, maxStaff)
+        if (newStaff !== h.staff_needed) {
+          newAdjustments.push({
+            date: h.date,
+            hour: h.hour,
+            day_name: h.day_name,
+            shift: h.shift,
+            original_staff: h.staff_needed,
+            new_staff: newStaff,
+            change: newStaff - h.staff_needed,
+            reason: alert.title
+          })
+        }
+      }
+    })
+    
+    // Add to existing adjustments (avoid duplicates)
+    setStaffingAdjustments(prev => {
+      const existingKeys = new Set(prev.map(a => `${a.date}-${a.hour}`))
+      const uniqueNew = newAdjustments.filter(a => !existingKeys.has(`${a.date}-${a.hour}`))
+      return [...prev, ...uniqueNew]
+    })
+    
+    // Update the forecast data with adjustments
+    if (newAdjustments.length > 0) {
+      setForecastData(prev => {
+        if (!prev) return prev
+        
+        const updatedHourly = prev.hourly.map(h => {
+          const adjustment = newAdjustments.find(
+            adj => adj.date === h.date && adj.hour === h.hour
+          )
+          if (adjustment) {
+            return { ...h, staff_needed: adjustment.new_staff }
+          }
+          return h
+        })
+        
+        // Recalculate summary
+        const totalStaff = updatedHourly.reduce((sum, h) => sum + h.staff_needed, 0)
+        const avgStaff = Math.round((totalStaff / updatedHourly.length) * 10) / 10
+        const peakStaff = Math.max(...updatedHourly.map(h => h.staff_needed))
+        
+        return {
+          ...prev,
+          hourly: updatedHourly,
+          summary: {
+            ...prev.summary,
+            avg_staff: avgStaff,
+            peak_staff: peakStaff
+          }
+        }
+      })
+    }
+  }
 
   // Handle disruption recalculation
   const handleRecalculate = async () => {
@@ -341,7 +500,11 @@ export default function Dashboard() {
                 <span className="text-sm font-medium">Report Disruption</span>
               </button>
               
-              <button className="flex items-center gap-2 px-4 py-2 text-slate-600 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors">
+              <button 
+                onClick={handleExport}
+                disabled={!forecastData}
+                className="flex items-center gap-2 px-4 py-2 text-slate-600 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
                 <Download className="w-4 h-4" />
                 <span className="text-sm font-medium">Export</span>
               </button>
@@ -685,18 +848,33 @@ export default function Dashboard() {
                     
                     {/* Action Button */}
                     <div className="ml-4">
-                      <button className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                        alert.recommendation.action === 'increase_staff'
-                          ? 'bg-green-100 text-green-700 hover:bg-green-200'
-                          : alert.recommendation.action === 'reduce_staff'
-                          ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
-                          : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                      }`}>
-                        {alert.recommendation.action === 'increase_staff' && `+${alert.recommendation.additional_staff} Staff`}
-                        {alert.recommendation.action === 'reduce_staff' && `-${alert.recommendation.reduction} Staff`}
-                        {alert.recommendation.action === 'prepare_weekend' && 'Plan Weekend'}
-                        {alert.recommendation.action === 'prepare_lunch' && 'Plan Lunch'}
-                        {alert.recommendation.action === 'prepare_dinner' && 'Plan Dinner'}
+                      <button 
+                        onClick={() => handleApplyAction(alert)}
+                        disabled={appliedActions.has(alert.id)}
+                        className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
+                          appliedActions.has(alert.id)
+                            ? 'bg-green-500 text-white cursor-default'
+                            : alert.recommendation.action === 'increase_staff'
+                            ? 'bg-green-100 text-green-700 hover:bg-green-200'
+                            : alert.recommendation.action === 'reduce_staff'
+                            ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                        }`}
+                      >
+                        {appliedActions.has(alert.id) ? (
+                          <>
+                            <Check className="w-4 h-4" />
+                            Applied
+                          </>
+                        ) : (
+                          <>
+                            {alert.recommendation.action === 'increase_staff' && `+${alert.recommendation.additional_staff} Staff`}
+                            {alert.recommendation.action === 'reduce_staff' && `-${alert.recommendation.reduction} Staff`}
+                            {alert.recommendation.action === 'prepare_weekend' && 'Plan Weekend'}
+                            {alert.recommendation.action === 'prepare_lunch' && 'Plan Lunch'}
+                            {alert.recommendation.action === 'prepare_dinner' && 'Plan Dinner'}
+                          </>
+                        )}
                       </button>
                     </div>
                   </div>
@@ -717,6 +895,67 @@ export default function Dashboard() {
                 <h3 className="font-semibold text-green-900">All Clear!</h3>
                 <p className="text-sm text-green-700">No staffing alerts for the forecast period. Current staffing levels appear adequate.</p>
               </div>
+            </div>
+          </Card>
+        )}
+
+        {/* Applied Staffing Adjustments Panel */}
+        {staffingAdjustments.length > 0 && (
+          <Card className="p-6 mb-6 border-green-200 bg-green-50/50">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
+                <Check className="w-5 h-5 text-green-500" />
+                Applied Staffing Adjustments ({staffingAdjustments.length})
+              </h3>
+              <button 
+                onClick={() => {
+                  // Only clear the adjustments and applied actions, NOT the forecast data
+                  setStaffingAdjustments([])
+                  setAppliedActions(new Set())
+                }}
+                className="text-sm text-red-600 hover:text-red-800"
+              >
+                Clear All
+              </button>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              {staffingAdjustments.slice(0, 9).map((adj, idx) => (
+                <div 
+                  key={idx}
+                  className="p-3 bg-white rounded-lg border border-green-200 flex items-center justify-between"
+                >
+                  <div>
+                    <p className="text-sm font-medium text-slate-900">
+                      {adj.day_name} @ {adj.hour}:00
+                    </p>
+                    <p className="text-xs text-slate-500">{adj.reason}</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-slate-500">{adj.original_staff}</span>
+                    <span className="text-slate-400">→</span>
+                    <span className="text-sm font-bold text-green-600">{adj.new_staff}</span>
+                    <span className="px-1.5 py-0.5 bg-green-100 text-green-700 text-xs rounded">
+                      +{adj.change}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {staffingAdjustments.length > 9 && (
+              <p className="text-sm text-slate-500 mt-3">
+                ...and {staffingAdjustments.length - 9} more adjustments
+              </p>
+            )}
+            
+            <div className="mt-4 p-3 bg-green-100 rounded-lg">
+              <p className="text-sm text-green-800">
+                <strong>Total Impact:</strong> +{staffingAdjustments.reduce((sum, a) => sum + a.change, 0)} staff-hours added to schedule
+                <span className="ml-2">
+                  (Est. additional cost: ${staffingAdjustments.reduce((sum, a) => sum + a.change, 0) * 15})
+                </span>
+              </p>
             </div>
           </Card>
         )}
