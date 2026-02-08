@@ -313,7 +313,7 @@ pip install -r requirements.txt
 
 ##  Team
 
-Built for **Hackathon 2024** by:
+Built for **Hackathon 2026** by:
 
 | Team Member | Role | Contributions |
 |-------------|------|---------------|
